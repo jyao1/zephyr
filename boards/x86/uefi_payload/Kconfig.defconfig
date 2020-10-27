@@ -1,0 +1,19 @@
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_UEFI_PAYLOAD_IA32
+
+config BUILD_OUTPUT_BIN
+	default n
+
+config BOARD
+	default "uefi_payload_ia32"
+
+config FLASH_SIMULATOR
+	default y
+	depends on FLASH
+
+endif # BOARD_UEFI_PAYLOAD_IA32
+
+config BOARD
+	default "uefi_payload_x64"
+	depends on BOARD_UEFI_PAYLOAD_X64

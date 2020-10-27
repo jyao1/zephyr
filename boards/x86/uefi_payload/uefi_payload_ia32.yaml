@@ -1,0 +1,13 @@
+identifier: uefi_payload_ia32
+name: UEFI_PAYLOAD_IA32
+type: qemu
+simulation: qemu
+arch: x86
+toolchain:
+  - zephyr
+  - xtools
+testing:
+  default: true
+  ignore_tags:
+     - net
+     - bluetooth
